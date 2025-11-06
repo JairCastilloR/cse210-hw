@@ -1,25 +1,28 @@
 using System;
-using System.IO;
+
 class Program
 {
     static void Main(string[] args)
     {
-        Journal journal = new Journal();
-        PromptGenerator promptGenerator = new PromptGenerator();
+        Job job1 = new Job();
+        job1._jobTitle = "Software Engineer";
+        job1._company = "Microsoft";
+        job1._startYear = 2019;
+        job1._endYear = 2022;
 
-        while (true)
-        {
-            Console.WriteLine("1. Write");
-            Console.WriteLine("2. Display");
-            Console.WriteLine("3. Load");
-            Console.WriteLine("4. Save");
-            Console.WriteLine("5. Save to CSV");
-            Console.WriteLine("6. Load to CSV");
-            Console.WriteLine("7. Quit");
-            Console.Write("What would you like to do? ");
+        Job job2 = new Job();
+        job2._jobTitle = "Manager";
+        job2._company = "Apple";
+        job2._startYear = 2022;
+        job2._endYear = 2023;
 
-            string choice = Console.ReadLine();
+        Resume myResume = new Resume();
+        myResume._name = "Jair Castillo";
 
-        }
+        myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
+
+        myResume.Display();
+        
     }
 }
