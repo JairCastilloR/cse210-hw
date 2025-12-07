@@ -64,7 +64,6 @@ namespace EternalQuest
                         CheckLevelUp(score);
                         break;
                     case "6":
-                        // Antes de salir guardamos
                         Storage.SaveGoals(DefaultDataFile, goals, score);
                         Console.WriteLine("Saved. Goodbye!");
                         exit = true;
